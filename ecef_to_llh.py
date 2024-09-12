@@ -50,12 +50,7 @@ else:
 # write script below this line
 
 # calculate longitude
-lon_rad = math.atan(r_y_km/r_x_km)
-if r_x_km<0.0:
-  lon_rad = lon_rad+math.pi
-elif r_y_km<0.0:
-  lon_rad = lon_rad+2.0*math.pi
-
+lon_rad = math.atan2(r_y_km,r_x_km)
 lon_deg = lon_rad*180.0/math.pi
 
 # initialize lat_rad, r_lon_km, r_z_km
